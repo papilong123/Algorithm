@@ -1,0 +1,17 @@
+void delete(LinkList &L Element x)
+\\此函数将链表L中的元素x从链表中除去
+{
+    LNode *p=L->next ,*pre=L, *q;
+    while(p){
+    if(p=>data = x){
+    q=p;
+    p=p->next;
+    pre->next=p;
+    free(q);
+}
+    else{
+    pre=p;
+    p=p->next;
+    }//else
+    }//while
+}

@@ -1,0 +1,43 @@
+void f(LinkList L){
+//反向输出链表的值
+    if(L->next){
+    f(L->next);
+}
+}
+
+void f(LinkList &L){
+//L是带头节点的单链表，删除链表中最小值结点
+    LNode *pre=L,*p=pre->next, q;
+    LNode *minpre, *minp;
+    while(p!=NULL){
+         if(p->data<pre->data){
+             minp=p;
+             minpre=pre;
+             }
+         pre=p;
+         p=p->next;
+    }
+    minpre->next=minp->next;
+    free(minp);
+    }  //while
+}
+
+void f(Linklist &L){
+//将带头节点的单链表就地逆置
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

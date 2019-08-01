@@ -40,8 +40,45 @@ void f(LinkList &L){
     }  //while
 }
 
-void f(Linklist &L){
+void f(Linklist L){
 //将带头节点的单链表就地逆置
+    LNode *p, *r;
+    p=L->next;
+    L->next=NULL;
+    while(p!=NULL){
+        r=p->next;
+        p->next=L->next;
+        L->next=p;
+        p=r;
+    }
+}
+
+Linklist f(Linklist L){
+//使带头结点的L递增有序
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

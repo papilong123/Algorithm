@@ -55,7 +55,41 @@ void f(Linklist L){
 
 Linklist f(Linklist L){
 //使带头结点的L递增有序
-    
+    LNode *p, *pre, *r;
+    p=L->next->next, p=r;
+    L->next->next=NULL;
+    while(p!=NULL){
+        r=p->next;
+        pre=L;
+        while(pre->next!=NULL&&pre->data < p->data){
+            p->next=pre->next;
+            pre->next=p;
+        }
+        p=r;
+    }
+return L;
+}
+
+void f(Linklist &L,Elemtype a,Elemtype b){
+//删除带头节点单链表中a<x<b的元素
+    LNode *p, *pre;
+    p=L->next,pre=L;
+    while(p!=NULL){
+        if(p->data>a && p->data<b){
+            pre->next=p->next;
+            free(p);
+            p=pre->next;
+        }
+        else{
+        pre=p;
+        p=pre->next;
+    }//while
+}
+
+void f(Linklist L1, Linklist L2){
+//找到两个链表的公共节点
+    LNode *p
+        
 
 
 

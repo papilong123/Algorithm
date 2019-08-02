@@ -106,11 +106,45 @@ void f(Linklist L1, Linklist L2){
         
 void f(Linklist L){
 //按递增顺序输出单链表的值
-    LNode *pre, *p;
+    LNode *pre, *p, *q;
     while(L->next!=NULL){
         pre=L, p=p->next;
-    while(p->next!=NULL && p->next->data > p->data)
+    while(p->next!=NULL)
+    if(pre->next->data > p->next->data)
         pre=p, p=p->next;
+        print(pre->next->data);
+        q=pre->next;
+        pre->next=q->next;
+        free(q);
+    }//while
+}
+
+void f(Linklist A){
+    i=0;
+    B=(Linklist)malloc(sizeof(LNode));
+    B->next=NULL;
+    LNode *ra=A, *rb=B;
+    p=A->next;
+    A->next=NULL;
+    
+    while(p!=NULL){
+        i++;
+        if(i%2=0){
+            rb->next=p;
+            rb=p;
+        }
+        else{
+            ra->next=p;
+            ra=p;
+        }
+        p=p->next;
+     }//while
+     ra->next=NULL;
+     rb->next=NULL;
+ }
+ ra->next=NULL;
+ rb->next=NULL;
+ }
         
 
 

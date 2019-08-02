@@ -41,7 +41,9 @@ while(!IsEmpty(Q)){
 }//while
 }
 
-void InThread(ThreadTree &p,)
+void InThread(ThreadTree &p,ThreadTree &pre)
+//线索二叉树的中序遍历
+
 
 
 

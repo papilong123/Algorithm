@@ -44,6 +44,34 @@ while(!IsEmpty(Q)){
 void InThread(ThreadTree &p,ThreadTree &pre)
 //线索二叉树的中序遍历
 
+void PostOrder(BiTree T){
+//后序遍历的非递归算法
+InitStack(S);
+p=T;
+BiTNode *r=NULL;
+while(p&&!Empty(S)){
+    if(p){
+        Push(S,p);
+        p=p->lchild;
+    }
+    else{
+        GetTop(S,p){
+        if(p->rchild&&p->rchild!=r){
+            p=p->rchild;
+            Push(S,p);
+            p=p->lchild;
+        }
+        else{
+            Pop(S,p);
+            visit(p);
+            r=p;
+            p=NULL;
+        }
+    }//while
+}
+
+void Bthight(BiTree T){
+//非递归算法求二叉树高度
 
 
 

@@ -21,10 +21,67 @@ InitStack(S); BiTree p=T;
         }
         else{
             Pop(S,p);visit(p);
-            p=p->next;
+            p=p->rchild;
         }
     }//while
 }
+
+void (BiTree T){
+//层序遍历的非递归算法，借助队列
+Init(Q)
+BiTree p;
+EnQueue(Q,T);
+while(!IsEmpty(Q)){
+    DeQueue(Q,p);
+    visit(p);
+    if(p->lchild!=NULL)
+        EnQueue(Q,p->lchild);
+    if(p->rchild!=NULL)
+        EnQueue(Q,p->rchild);
+}//while
+}
+
+void InThread(ThreadTree &p,)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

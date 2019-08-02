@@ -154,10 +154,23 @@ void f(Linklist L){
  
 
     
-void f(Linklist L){
-//去除递增有序链表内重复元素
-
-
+void f(Linklist &L){
+//去除递增有序链表内重复元素,假设链表不空
+    LNode *p, *q;
+    p=L->next;
+    while(p->next!=NULL){
+        q=p->next;
+        if(p->data=q->data)
+            p->next=q->next;
+            free(q);
+        else{
+            p=p->next;
+    }//while
+}
+        
+void f(Linklist &A, Linklis &B){
+//将两个递增的单链表归并成一个递减次序的单链表
+    while()
 
 
 

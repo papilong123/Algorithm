@@ -1,0 +1,17 @@
+int f(char A[ ]){
+//栈的输入输出合法性判断
+  int i=j=k=0;
+  while(A[i]!='\0'){
+    switch(A[i]):{
+        case 'I':k++;break;
+        case 'O':j++;
+        if(k>j){print("wrong answer");   return 0;}
+        i++;
+   }
+   if(j!=k)
+   printf("wrong anwser");
+   return 0;
+   else{
+        printf("right!");
+   return 1;
+}

@@ -88,10 +88,30 @@ void f(Linklist &L,Elemtype a,Elemtype b){
 
 void f(Linklist L1, Linklist L2){
 //找到两个链表的公共节点
-    LNode *p
+    LNode *La, *Lb, *p1, *p2;
+    int dist;
+    length(L1)>length(L2)?La=L1: Lb=L2;
+    *p1=p1->next, *p2=p2->next;
+    dist=length(L1)-length(L2);
+    while(dist--)
+        p1=p1->next;
+    while(p1!=NULL){
+        if(p1=p2)
+        return p1;
+        p1=p1->next;
+        p2=p2->next;
+    }  //while
+    return NULL;
+}
         
-
-
+void f(Linklist L){
+//按递增顺序输出单链表的值
+    LNode *pre, *p;
+    while(L->next!=NULL){
+        pre=L, p=p->next;
+    while(p->next!=NULL && p->next->data > p->data)
+        pre=p, p=p->next;
+        
 
 
 

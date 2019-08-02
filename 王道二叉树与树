@@ -10,3 +10,25 @@ int (Sqtree T,int i,int j){
         return T[i];
     }//if
 }
+
+void InOrder(Bitree T){
+//中序遍历的非递归算法，借助栈
+InitStack(S); BiTree p=T;
+    while(p||!IsEmpty(s)){
+        if(p){
+            Push(S,p);
+            p=p->lchild;
+        }
+        else{
+            Pop(S,p);visit(p);
+            p=p->next;
+        }
+    }//while
+}
+
+
+
+
+
+
+
